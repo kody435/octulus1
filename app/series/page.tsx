@@ -1,6 +1,6 @@
 import Client from "./Client";
 
-async function getData() { 
+async function getData() {
   const options = {
     method: "GET",
     headers: {
@@ -10,7 +10,7 @@ async function getData() {
     },
   };
   const response = await fetch(
-    `https://api.themoviedb.org/3/trending/all/day?language=en-US`,
+    `https://api.themoviedb.org/3/trending/tv/day?language=en-US`,
     options
   );
 
@@ -21,5 +21,5 @@ export default async function Home() {
   const data = await getData();
   console.log(data);
 
-  return <Client data={data}  />
+  return <Client data={data} />;
 }
