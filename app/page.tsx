@@ -1,7 +1,6 @@
-import Image from 'next/image'
+import Image from "next/image";
+import Client from "./Client";
 
 export default function Home() {
-  return (
-    <main>Yo yo nigga</main>
-  )
+  return <Client />
 }
