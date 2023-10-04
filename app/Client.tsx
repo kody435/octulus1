@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Client() {
+export default function Client({data}: {data: any}) {
   return (
-    <div>clienC</div>
+    <pre>{JSON.stringify(data, null, 2)}</pre>
   )
 }
