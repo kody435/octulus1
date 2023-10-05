@@ -18,9 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
       </body>
+      {/* <!-- from node_modules --> */}
+      <script src="node_modules/@material-tailwind/html/scripts/collapse.js"></script>
+      {/* <!-- from cdn --> */}
+      <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
     </html>
   )
 }
