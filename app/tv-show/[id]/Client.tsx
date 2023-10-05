@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 export default function Client({ data }: { data: any }) {
-  console.log(data);
+
   return (
-    <div>
+    <div className="">
       <div>
         <h1 className="text-2xl">{data.name}</h1>
         <p>{data.overview}</p>

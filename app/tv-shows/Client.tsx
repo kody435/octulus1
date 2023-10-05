@@ -1,7 +1,14 @@
-"use client"
+"use client";
 
 import Link from "next/link";
-import { JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useState } from "react";
+import {
+  JSXElementConstructor,
+  Key,
+  PromiseLikeOfReactNode,
+  ReactElement,
+  ReactNode,
+  useState,
+} from "react";
 import Image from "next/image";
 
 export default function Client({ movies }: { movies: any }) {
@@ -16,13 +23,15 @@ export default function Client({ movies }: { movies: any }) {
   };
 
   const filteredMovies = selectedGenre
-    ? movies.filter((movie: { genre_ids: string | never[]; }) => movie.genre_ids.includes(selectedGenre))
+    ? movies.filter((movie: { genre_ids: string | never[] }) =>
+        movie.genre_ids.includes(selectedGenre)
+      )
     : movies;
-  
+
   console.log(movies);
   return (
     <div className="flex flex-col gap-10 p-5">
-      <h1 className="text-4xl font-bold">Movies</h1>
+      <h1 className="text-4xl font-bold">TV Shows</h1>
       {/* Filters */}
       <div className="flex flex-col gap-5">
         <h2 className="text-lg font-semibold">Genres</h2>
@@ -152,9 +161,13 @@ export default function Client({ movies }: { movies: any }) {
 
       <div bg-inherit>
         <div className="bg-inherit">
-        
           {selectedGenre !== null && (
-            <button className="border px-2 rounded-full mb-4 " onClick={resetGenreFilter}>Reset Filter</button>
+            <button
+              className="border px-2 rounded-full mb-4 "
+              onClick={resetGenreFilter}
+            >
+              Reset Filter
+            </button>
           )}
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-5 bg-inherit ">
@@ -162,7 +175,7 @@ export default function Client({ movies }: { movies: any }) {
             (movie: {
               id: Key | null | undefined;
               poster_path: any;
-              title:
+              name:
                 | string
                 | number
                 | boolean
@@ -173,20 +186,20 @@ export default function Client({ movies }: { movies: any }) {
                 | undefined;
             }) => (
               <Link
-                href={`/movie/${movie.id}`}
+                href={`/tv-show/${movie.id}`}
                 key={movie.id}
                 className="flex flex-col gap-1 justify-start items-center "
               >
                 <Image
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                  alt={(movie.title as string) + " poster"}
+                  alt={(movie.name as string) + " poster"}
                   className="w-full h-56 rounded-xl"
                   width={200}
                   height={450}
                 />
                 <div className="flex flex-col gap-5 ">
                   <h2 className="text-md font-light text-center">
-                    {movie.title}
+                    {movie.name}
                   </h2>
                 </div>
               </Link>

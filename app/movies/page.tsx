@@ -10,7 +10,7 @@ async function getData() {
     },
   };
   const response = await fetch(
-    `https://api.themoviedb.org/3/trending/movie/day?language=en-US`,
+    `https://api.themoviedb.org/3/trending/movie/day?language=en-US&append_to_response=images`,
     options
   );
 
@@ -19,7 +19,6 @@ async function getData() {
 
 export default async function Home() {
   const data = await getData();
-  console.log(data);
 
-  return <Client data={data} />;
+  return <Client movies={data.results} />;
 }
