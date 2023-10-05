@@ -3,14 +3,19 @@ import Link from "next/link";
 import { JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useState } from "react";
 import Image from "next/image";
 import React from 'react'
+import MovieCard from "@/components/MovieCard";
+
 
 export default function Client({data, data2}: {data: any, data2: any}) {
   
   return (
     <>
     <div className="flex flex-col gap-10 p-5">
+      <div className="bg-inherit">
+        <MovieCard data = { data } />
+      </div>
       <h1 className="text-4xl font-bold">Top Trending Movies</h1>
-      
+
       <div bg-inherit>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-5 bg-inherit ">
           {data2.map(
