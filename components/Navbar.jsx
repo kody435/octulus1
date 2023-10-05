@@ -187,7 +187,7 @@ function NavList() {
       <Typography
         as="a"
         href="/movies"
-        variant="medium"
+        variant="h5"
         color="white"
         className="font-normal"
       >
@@ -200,7 +200,7 @@ function NavList() {
       <Typography
         as="a"
         href="tv-shows"
-        variant="medium"
+        variant="h5"
         color="white"
         className="font-normal"
       >
@@ -229,7 +229,7 @@ export default function NavbarWithMegaMenu() {
         <Typography
           as="a"
           href="/"
-          variant="h4"
+          variant="h3"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2 border-b border-blue-grey-500"
         >
           The Octulus
