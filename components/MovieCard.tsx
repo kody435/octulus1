@@ -78,7 +78,7 @@ export default function MovieCard({ data }: { data: any }){
                                     {movie.title}
                                 </Typography>
                                 <Typography color="white" className="mt-2 font-normal">
-                                Rating: {movie.vote_average} <i className="fas fa-star star-icon text-amber-500" /> 
+                                Rating: {movie.vote_average} <i className="fas fa-star star-icon text-orange-500" /> 
                                 <link
                                 rel="stylesheet"
                                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -89,7 +89,7 @@ export default function MovieCard({ data }: { data: any }){
                                 </Typography>
                                 </div>
                                 <Typography variant="h5" color="white">
-                                <Button variant="filled" color="indigo" className="flex items-center gap-3 mt-2"><i className="fas fa-play" /> Play Now</Button>
+                                <Button variant="filled" color="orange" className="flex items-center gap-3 mt-2 rounded-full"><i className="fas fa-play" /> Play Now</Button>
                                 </Typography>
                             </figcaption>
 
