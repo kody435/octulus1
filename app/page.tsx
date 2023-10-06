@@ -1,6 +1,6 @@
 import Client from "./Client";
 
-export const dynamic = "force-dynamic"
+export const dynamic="force-dynamic"
 
 async function getTrendings() { 
   const options = {

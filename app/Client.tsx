@@ -6,7 +6,6 @@ import MovieCard from "@/components/MovieCard";
 
 
 export default function Client({data, data2}: {data: any, data2: any}) {
-  
   return (
     <>
     <div className="flex flex-col gap-10 p-5">
