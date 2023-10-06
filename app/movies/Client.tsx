@@ -150,7 +150,7 @@ export default function Client({ movies }: { movies: any }) {
         </ul>
       </div>
 
-      <div bg-inherit>
+      <div className="bg-inherit">
         <div className="bg-inherit">
         
           {selectedGenre !== null && (
