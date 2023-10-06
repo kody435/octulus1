@@ -213,9 +213,9 @@ export default function NavbarWithMegaMenu() {
         <Link href="/">
         <Typography
           variant="h3"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2 border-b border-blue-grey-500"
+          className="mr-4 cursor-pointer py-1 lg:ml-2 border-b-2 border-blue-grey-500"
         >
-          The Octulus
+          The OCTULUS
         </Typography>
         </Link>
         <div className="hidden lg:block">

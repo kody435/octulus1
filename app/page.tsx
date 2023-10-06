@@ -41,5 +41,5 @@ export default async function Home() {
 
   const data2 = await getCrimes();
 
-  return <Client data={data.results} data2={data.results}  />
+  return <Client data={data.results} data2={data2.results}  />
 }
