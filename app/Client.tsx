@@ -1,6 +1,5 @@
 
 import Link from "next/link";
-import { JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useState } from "react";
 import Image from "next/image";
 import React from 'react'
 import MovieCard from "@/components/MovieCard";
@@ -53,9 +52,10 @@ export default function Client({data, data2}: {data: any, data2: any}) {
             )
           )}
         </div>
+        {/* Trending Movies */}
+        <h1 className="text-2xl font-light">Top Trending Movies</h1>
+        <div bg-inherit></div>
       </div>
-    </div>
-
     </>
-  )
+  );
 }

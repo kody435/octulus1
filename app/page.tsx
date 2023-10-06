@@ -1,5 +1,7 @@
 import Client from "./Client";
 
+export const dynamic = "force-dynamic"
+
 async function getTrendings() { 
   const options = {
     method: "GET",
@@ -38,7 +40,6 @@ export default async function Home() {
   const data = await getTrendings();
 
   const data2 = await getCrimes();
-  console.log(data2);
 
-  return <Client data={data.results} data2={data.results}  />
+  return <Client data={data.results} data2={data2.results}  />
 }

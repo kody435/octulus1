@@ -1,5 +1,7 @@
 import Client from "./Client";
 
+export const dynamic = "force-dynamic";
+
 async function getData() {
   const options = {
     method: "GET",

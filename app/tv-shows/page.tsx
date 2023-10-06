@@ -1,5 +1,7 @@
 import Client from "./Client";
 
+export const dynamic = "force-dynamic";
+
 async function getData() {
   const options = {
     method: "GET",
@@ -19,7 +21,6 @@ async function getData() {
 
 export default async function Home() {
   const data = await getData();
-  console.log(data);
 
   return <Client movies={data.results} />;
 }
