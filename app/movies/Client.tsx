@@ -19,7 +19,7 @@ export default function Client({ movies }: { movies: any }) {
     ? movies.filter((movie: { genre_ids: string | never[]; }) => movie.genre_ids.includes(selectedGenre))
     : movies;
   
-  console.log(movies);
+  // console.log(movies);
   return (
     <div className="flex flex-col gap-10 p-5">
       <h1 className="text-4xl font-bold">Movies</h1>
@@ -150,8 +150,8 @@ export default function Client({ movies }: { movies: any }) {
         </ul>
       </div>
 
-      <div className="bg-inherit">
-        <div className="bg-inherit">
+      <div>
+        <div>
         
           {selectedGenre !== null && (
             <button className="border px-2 rounded-full mb-4 " onClick={resetGenreFilter}>Reset Filter</button>

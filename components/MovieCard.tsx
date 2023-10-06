@@ -4,7 +4,7 @@ import Link from "next/link";
 import { JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useState } from "react";
 import Image from "next/image";
 import React from 'react';
-import { Carousel, Typography, Button, Avatar  } from "@material-tailwind/react";
+import { Carousel, Typography, Button } from "@material-tailwind/react";
  
 
 
@@ -54,10 +54,12 @@ export default function MovieCard({ data }: { data: any }){
                         className="flex flex-col gap-1 justify-start items-center "
                     >
                         <figure className="relative h-96 w-full">
-                            <img
+                            <Image
                             className="h-full w-full rounded-xl object-cover object-center"
                             src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-                            alt={(movie.title as string) + " poster"} 
+                            alt={(movie.title as string) + " poster"}
+                            width={500}
+                            height={500}
                             />
                             {/* <img
                                 src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
@@ -74,10 +76,10 @@ export default function MovieCard({ data }: { data: any }){
                             
                             <figcaption className="absolute bottom-0 left-2/4 flex w-full -translate-x-2/4 justify-between rounded-xl bg-black/75 py-4 px-6 shadow-lg shadow-black/5 backdrop-blur-lg">
                                 <div>
-                                <Typography variant="h5" color="white">
+                                <h3>
                                     {movie.title}
-                                </Typography>
-                                <Typography color="white" className="mt-2 font-normal">
+                                </h3>
+                                <h5 className="mt-2">
                                 Rating: {movie.vote_average} <i className="fas fa-star star-icon text-orange-500" /> 
                                 <link
                                 rel="stylesheet"
@@ -86,11 +88,11 @@ export default function MovieCard({ data }: { data: any }){
                                 crossOrigin="anonymous"
                                 referrerPolicy="no-referrer"
                                 />
-                                </Typography>
+                                </h5>
                                 </div>
-                                <Typography variant="h5" color="white">
+                                <h4>
                                 <Button variant="filled" color="orange" className="flex items-center gap-3 mt-2 rounded-full"><i className="fas fa-play" /> Play Now</Button>
-                                </Typography>
+                                </h4>
                             </figcaption>
 
                         </figure>

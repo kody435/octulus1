@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 export default function Client({ data }: { data: any }) {
-  console.log(data)
+  // console.log(data)
   return (
     <div>
       <div>

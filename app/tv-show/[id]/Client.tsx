@@ -4,7 +4,7 @@ import React from "react";
 export default function Client({ data }: { data: any }) {
 
   return (
-    <div className="">
+    <div>
       <div>
         <h1 className="text-2xl">{data.name}</h1>
         <p>{data.overview}</p>

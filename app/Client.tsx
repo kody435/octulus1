@@ -1,22 +1,22 @@
-
 import Link from "next/link";
+import dynamic from 'next/dynamic'
 import Image from "next/image";
 import React from 'react'
 import { JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode } from "react";
-import MovieCard from "@/components/MovieCard";
+const Slider = dynamic(() => import('../components/MovieCard'))
 
 
 export default function Client({data, data2}: {data: any, data2: any}) {
-  
+  // console.log(data)
   return (
     <>
     <div className="flex flex-col gap-10 p-5">
-      <div className="bg-inherit">
-        <MovieCard data = { data } />
+      <div>
+        <Slider data = { data } />
       </div>
-      <h1 className="text-4xl font-bold">Top Trending Movies</h1>
 
-      <div bg-inherit>
+      <h1 className="text-4xl font-bold">Top Trending Movies</h1>
+      <div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-5 bg-inherit ">
           {data2.map(
             (movie: {
@@ -55,9 +55,9 @@ export default function Client({data, data2}: {data: any, data2: any}) {
         </div>
         {/* Trending Movies */}
         <h1 className="text-2xl font-light">Top Trending Movies</h1>
-        <div bg-inherit></div>
+        <div></div>
       </div>
-      </div>
+    </div>
     </>
   );
 }

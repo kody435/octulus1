@@ -28,7 +28,7 @@ export default function Client({ movies }: { movies: any }) {
       )
     : movies;
 
-  console.log(movies);
+  // console.log(movies);
   return (
     <div className="flex flex-col gap-10 p-5">
       <h1 className="text-4xl font-bold">TV Shows</h1>
@@ -159,8 +159,8 @@ export default function Client({ movies }: { movies: any }) {
         </ul>
       </div>
 
-      <div bg-inherit>
-        <div className="bg-inherit">
+      <div>
+        <div>
           {selectedGenre !== null && (
             <button
               className="border px-2 rounded-full mb-4 "
