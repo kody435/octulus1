@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from 'react'
+import { JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode } from "react";
 import MovieCard from "@/components/MovieCard";
 
 
@@ -55,6 +56,7 @@ export default function Client({data, data2}: {data: any, data2: any}) {
         {/* Trending Movies */}
         <h1 className="text-2xl font-light">Top Trending Movies</h1>
         <div bg-inherit></div>
+      </div>
       </div>
     </>
   );
